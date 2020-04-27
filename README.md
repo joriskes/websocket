@@ -1,3 +1,11 @@
+# Simple websocket server / client chat app
+Using React, typescript & material-ui
+The server is simply an echo server running on nodejs
+
+## Hosted example
+
+Available here: [http://websocket.lieverlimoen.nl/](http://websocket.lieverlimoen.nl/)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -20,7 +28,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Server code
+## Server code
 
 The server code lives in src/server/
 server.js and package.json should be deployed with node js
