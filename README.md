@@ -22,4 +22,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Server code
 
-The server code lives in build/server/
+The server code lives in src/server/
+server.js and package.json should be deployed with node js
