@@ -2,9 +2,10 @@
 Using React, typescript & material-ui
 The server is simply an echo server running on nodejs
 
-## Hosted example
-
-Available here: [http://websocket.lieverlimoen.nl/](http://websocket.lieverlimoen.nl/)
+## Installation
+The server code lives in src/server/
+Deploy server.js and package.json on a node js capable location, run `npm install` and `npm start`
+Copy the example.env file in the root to .env or .env.local and update the url pointing to the websocket server (`ws://yourdomainorip:port`)
 
 ## Available Scripts
 
@@ -27,8 +28,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Server code
-
-The server code lives in src/server/
-server.js and package.json should be deployed with node js

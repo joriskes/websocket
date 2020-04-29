@@ -4,10 +4,12 @@ import ChatMessage from "./ChatMessage";
 import {WebSocketMessage, WebsocketStates} from "./types";
 import {Divider, Box} from "@material-ui/core";
 
-const URL = 'ws://websocket.lieverlimoen.nl:3030'
-
 const Chat = () => {
-  const ws = useRef<WebSocket>(new WebSocket(URL));
+  const wsServerUrl = process.env.REACT_APP_WEBSOCKET_SERVER_URL ?? '';
+  if(wsServerUrl === '') {
+    console.error('Please create a .env.local file and add REACT_APP_WEBSOCKET_SERVER_URL pointing to the server');
+  }
+  const ws = useRef<WebSocket>(new WebSocket(wsServerUrl));
   const [messages, setMessages] = useState<WebSocketMessage[]>([]);
   const [nick, setNick] = useState<string>(`Anonymous user ${Math.round(Math.random()*10000)}`)
   const [websocketStatus, setWebsocketStatus] = useState<WebsocketStates>(WebsocketStates.CONNECTING)
